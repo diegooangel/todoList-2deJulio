@@ -17,9 +17,14 @@ const listar = () => {
     ul.appendChild(li);
     li.appendChild(contenido);
 
+//Creamos el boton para eliminar la tarea.
+    const boton = document.createElement('button');
+    const contenidoBoton = document.createTextNode('Borrar');
+    li.appendChild(boton);
+    boton.appendChild(contenidoBoton);
+
     input.value = "";
 }
-
 
 
 
