@@ -21,10 +21,20 @@ const listar = () => {
     const contenidoBoton = document.createTextNode('Borrar');
     li.appendChild(boton);
     boton.appendChild(contenidoBoton);
-
+    //Con el click se dispara un evento para poder eliminar el padre del elemente del boton que seria el ul.
     boton.addEventListener('click', (e) => {
         const item = e.target.parentElement;
         ul.removeChild(item);
+    });
+
+
+    //Ahora vamos a interta que se pueda editar la tarea.
+    const botonEditar = document.createElement('button');
+    botonEditar.textContent = "Editar tarea."
+    li.appendChild(botonEditar);
+    botonEditar.addEventListener('click', (e) => {
+        const editarTarea = prompt("Editar la tarea: ");
+        e.target.parentElement.textContent = editarTarea;
     });
 
 
