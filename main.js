@@ -4,6 +4,8 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
 })
 
+let id = 0;
+
 const input = document.getElementById('input');
 const ul = document.getElementById('ul');
 const botonAgregarTarea = document.getElementById('listarTarea');
@@ -12,22 +14,12 @@ botonAgregarTarea.addEventListener('click', () => {
     const element = `
                     <li>
                         <p>${input.value}</p>
-                        <button type="submit" id="0">eliminar</button>
+                        <button type="submit" id="${id}">eliminar</button>
                         <button type="submit" id="0">editar</button>
                     </li>
                     `
     ul.insertAdjacentHTML("beforeend", element);
+    id++;
     input.value = "";
 })
-
-
-
-/*
-<li>
-            <p></p>
-            <button type="submit" id="0">eliminar</button>
-            <button type="submit" id="0">editar</button>
-        </li>
-
-*/
 
