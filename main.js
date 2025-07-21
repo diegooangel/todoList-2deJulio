@@ -49,7 +49,12 @@ botonAgregarTarea.addEventListener('click', () => {
         const parrafo = item.querySelector('p'); //Aca podemos almacenar el parrafo del li, buscando el unico p con querySelector.
         console.log(parrafo);
         const contenidoPromp = prompt('Modificar tarea: '); //Almacenamos el nuevo contenido que va a tener el parrafo.
-        parrafo.textContent = contenidoPromp; //Le asignamos el nuevo contenido al parrafo, osea la tarea.
+        if (contenidoPromp) {
+            parrafo.textContent = contenidoPromp; //Le asignamos el nuevo contenido al parrafo, osea la tarea.
+        } else{
+            alert("La tarea no puede estar vacia");
+        }
+        
     });
     
     
