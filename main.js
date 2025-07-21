@@ -18,17 +18,23 @@ botonAgregarTarea.addEventListener('click', () => {
     const botonEliminar = document.createElement('button');
     const botonEditar = document.createElement('button');
     
+
+    
+    if (tarea) {
+        p.textContent = tarea;
+        //Aca metemos todos los elementos creados, dentro del ul.
+        //Osea el p y los botones van dentro del li, que este va dentro del ul.
+        li.appendChild(p);
+        li.appendChild(botonEliminar);
+        li.appendChild(botonEditar);
+        ul.appendChild(li);
+    } else{
+        alert("La tarea no puede estar vacia.");
+    }
+
     //Aca a los elementos creados le asignamos contenido.
-    p.textContent = tarea;
     botonEditar.textContent = "Editar tarea.";
     botonEliminar.textContent = "Eliminar tarea.";
-
-    //Aca metemos todos los elementos creados, dentro del ul.
-    //Osea el p y los botones van dentro del li, que este va dentro del ul.
-    ul.appendChild(li);
-    li.appendChild(p);
-    li.appendChild(botonEliminar);
-    li.appendChild(botonEditar);
 
     //Aca escuchamos el click del boton para eliminar la tarea.
     botonEliminar.addEventListener('click', (e) => {
