@@ -57,14 +57,16 @@ botonAgregarTarea.addEventListener('click', () => {
         
     });
     
-    
-    
-
-
-
-
     input.value = "";
 })
 
+const modoNocturno = document.getElementById("modoNocturno");
+modoNocturno.addEventListener('click', () => {
+    if (document.body.classList.contains("modo-oscuro")) {
+        document.body.classList.remove("modo-oscuro");
+    } else {
+        document.body.classList.add("modo-oscuro");
+    }
+});
 
 

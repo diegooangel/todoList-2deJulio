@@ -2,3 +2,8 @@ body{
     background-color:rgb(40, 85, 87);
     color: bisque;
 }
+
+.modo-oscuro{
+    background-color: black;
+    color:bisque;
+}
